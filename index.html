@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I 5 Colori del Benessere - Scuola e Salute</title>
+    <style>
+        :root {
+            --primary: #2d3436;
+            --accent: #0984e3;
+            --white: #ffffff;
+            --rosso: #e74c3c;
+            --giallo: #f1c40f;
+            --bianco: #bdc3c7;
+            --verde: #27ae60;
+            --blu: #8e44ad;
+            --bg-light: #f4f7f6;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            margin: 0;
+            line-height: 1.8;
+            color: var(--primary);
+            background-color: var(--bg-light);
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1e3799 0%, #0984e3 100%);
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        /* Navigazione */
+        nav {
+            background: white;
+            padding: 20px;
+            position: sticky;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            z-index: 1000;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            transition: 0.3s;
+            padding: 5px 10px;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+            background: #f0f7ff;
+            border-radius: 5px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 60px 20px;
+        }
+
+        /* Grid */
+        .grid-colors {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-top: 12px solid;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .card.red { border-color: var(--rosso); }
+        .card.yellow { border-color: var(--giallo); }
+        .card.white { border-color: var(--bianco); }
+        .card.green { border-color: var(--verde); }
+        .card.blue { border-color: var(--blu); }
+
+        /* Sezione Obiettivi */
+        .goals-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 80px;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            align-items: center;
+        }
+
+        /* Tabella Stagionalità */
+        .season-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .season-table th, .season-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        .season-table th {
+            background-color: var(--accent);
+            color: white;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .goals-section { grid-template-columns: 1fr; }
+            header h1 { font-size: 2rem; }
+        }
+
+        footer {
+            background: var(--primary);
+            color: #bdc3c7;
+            text-align: center;
+            padding: 60px;
+            margin-top: 80px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>I 5 Colori del Benessere</h1>
+    <p>Nutri il tuo talento, un colore alla volta</p>
+</header>
+
+<nav>
+    <a href="#gruppi">I Colori</a>
+    <a href="#scuola">Rendimento</a>
+    <a href="#obiettivi">Obiettivi</a>
+    <a href="#consigli">Consigli Pratici</a>
+</nav>
+
+<div class="container">
+    <section class="intro" id="gruppi">
+        <h2 style="text-align: center; font-size: 2.2rem;">Perché variare i colori?</h2>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto 50px;">La natura ha associato colori diversi a nutrienti diversi. Mangiare "arcobaleno" non è solo bello da vedere, ma assicura che il cervello e il corpo ricevano tutto il carburante necessario per affrontare verifiche e sport.</p>
+    </section>
+
+    <div class="grid-colors">
+        <div class="card red">
+            <span class="label">Cuore e Memoria</span>
+            <h3>Rosso</h3>
+            <p><strong>Esempi:</strong> Pomodori, barbabietole, ciliegie, arance rosse.</p>
+            <p>Contengono <em>licopene</em>, un potente antiossidante che protegge le cellule dallo stress dello studio intenso.</p>
+        </div>
+
+        <div class="card yellow">
+            <span class="label">Vista e Pelle</span>
+            <h3>Giallo / Arancio</h3>
+            <p><strong>Esempi:</strong> Carote, peperoni, pesche, limoni.</p>
+            <p>Ricchi di <em>Beta-carotene</em>, essenziale per la salute degli occhi (fondamentale dopo ore davanti ai libri o schermi).</p>
+        </div>
+
+        <div class="card white">
+            <span class="label">Difese Naturali</span>
+            <h3>Bianco</h3>
+            <p><strong>Esempi:</strong> Finocchi, sedano, funghi, mele.</p>
+            <p>Aiutano a regolare la pressione e contengono quercetina, che agisce come scudo per il tuo organismo.</p>
+        </div>
+
+        <div class="card green">
+            <span class="label">Energia e Focus</span>
+            <h3>Verde</h3>
+            <p><strong>Esempi:</strong> Zucchine, bieta, insalata, rucola.</p>
+            <p>La <em>clorofilla</em> e il magnesio aiutano a combattere la stanchezza mentale e i crampi muscolari.</p>
+        </div>
+
+        <div class="card blue">
+            <span class="label">Logica e Intuizione</span>
+            <h3>Blu / Viola</h3>
+            <p><strong>Esempi:</strong> More, prugne, cavolo viola, radicchio.</p>
+            <p>Le <em>antocianine</em> migliorano la microcircolazione cerebrale, favorendo la concentrazione durante le lezioni.</p>
+        </div>
+    </div>
+
+    <!-- NUOVA SEZIONE: OBIETTIVI -->
+    <section class="goals-section" id="obiettivi">
+        <div>
+            <h2>Obiettivi del Progetto</h2>
+            <p>Il nostro scopo è trasformare la mensa e la cucina di casa in un laboratorio di salute. Gli obiettivi principali sono:</p>
+            <ul>
+                <li>Ridurre il consumo di zuccheri raffinati.</li>
+                <li>Aumentare la consapevolezza sulla stagionalità.</li>
+                <li>Promuovere il benessere psicofisico attraverso il cibo fresco.</li>
+            </ul>
+        </div>
+        <div style="background: #eef2f3; padding: 30px; border-radius: 10px; border-left: 5px solid var(--accent);">
+            <h3 style="margin-top:0">Lo sapevi?</h3>
+            <p>Chi consuma almeno 5 porzioni di frutta e verdura al giorno registra mediamente un punteggio di attenzione superiore del 20% durante le ore pomeridiane.</p>
+        </div>
+    </section>
+
+    <!-- NUOVA SEZIONE: TABELLA STAGIONALE -->
+    <section id="consigli" style="margin-top: 80px;">
+        <h2>Cosa scegliere in questo momento?</h2>
+        <p>Seguire le stagioni garantisce il massimo dei nutrienti. Ecco un piccolo promemoria:</p>
+        <table class="season-table">
+            <thead>
+                <tr>
+                    <th>Stagione</th>
+                    <th>Frutta Consigliata</th>
+                    <th>Verdura Consigliata</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Primavera</strong></td>
+                    <td>Fragole, nespole</td>
+                    <td>Asparagi, carciofi, piselli</td>
+                </tr>
+                <tr>
+                    <td><strong>Estate</strong></td>
+                    <td>Anguria, pesche, albicocche</td>
+                    <td>Pomodori, melanzane, peperoni</td>
+                </tr>
+                <tr>
+                    <td><strong>Autunno</strong></td>
+                    <td>Uva, melograno, cachi</td>
+                    <td>Zucca, cavolfiore, broccoli</td>
+                </tr>
+                <tr>
+                    <td><strong>Inverno</strong></td>
+                    <td>Arance, mandarini, kiwi</td>
+                    <td>Spinaci, finocchi, radicchio</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="school-section" id="scuola">
+        <h2>Nutrizione e Successo Scolastico</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+            <div style="flex: 1; min-width: 250px;">
+                <h3>Il decalogo dello studente:</h3>
+                <ul>
+                    <li><strong>Idratazione:</strong> Bevi un bicchiere d'acqua ogni ora.</li>
+                    <li><strong>Pausa Attiva:</strong> Mangia una mela o noci durante l'intervallo.</li>
+                    <li><strong>No al Junk Food:</strong> Merendine confezionate creano picchi di zucchero seguiti da sonnolenza.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</div>
+
+<footer>
+    <p><strong>Progetto Educativo "Salute in Colore"</strong></p>
+    <p>Realizzato per le Scuole Secondarie - 2026</p>
+    <div style="margin-top: 20px; font-size: 0.8rem; opacity: 0.7;">
+        <p>In collaborazione con il Ministero della Salute e dell'Istruzione</p>
+    </div>
+</footer>
+
+</body>
+</html>
